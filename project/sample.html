@@ -1,0 +1,993 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="manifest" href="./hCgdEFEQLCzy/manifest.json">
+    <title>Casino</title>
+    <link href="./hCgdEFEQLCzy/static/css/main.fc9f3533.chunk.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box
+        }
+        /* Set height of body and the document to 100% */
+        
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+        /* Style tab links */
+        
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+        
+        .tablink:hover {
+            background-color: #777;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        
+        .tabcontent {
+            color: white;
+            display: none;
+            height: 100%;
+        }
+        
+        #Casino {
+            background-color: white;
+        }
+        
+        #Offers {
+            background-color: white;
+        }
+        
+        #VIP {
+            background-color: white;
+        }
+        
+        #Packages {
+            background-color: white;
+        }
+        
+        #PlaySlots {
+            background-color: white;
+        }
+        
+        .carousel {
+            width: 100vw;
+        }
+        
+        .carousel,
+        .carousel__main {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel__item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .carousel__dots {
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            right: 0;
+            font-size: 0;
+            text-align: center;
+        }
+        
+        .carousel__dot {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .carousel__dot--active {
+            background-color: #fff;
+        }
+        
+        .carousel__dot:only-child {
+            display: none;
+        }
+        
+        .carousel__dot:nth-child(n+2) {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+
+
+
+    <div id="root" data-root="hCgdEFEQLCzy">
+        <div class="casino-app">
+            <div class="app-tabs tab_main">
+                <button class="tab-link-active tab-link casino-tab" onclick="openPage('Casino', this, '#F0F0F0')"
+                    id="defaultOpen">Casino</button><button class="tab-link offers-tab"
+                    onclick="openPage('Offers', this, '#F0F0F0')">Offers</button><button class="tab-link vip-tab"
+                    onclick="openPage('VIP', this, '#F0F0F0')">Vip</button><button class="tab-link pack-tab"
+                    onclick="openPage('Packages', this, '#F0F0F0')">Packages</button><button class="tab-link play-tab"
+                    onclick="openPage('PlaySlots', this, '#F0F0F0')">Play Slots</button>
+                    <div id="Offers" class="tabcontent">
+                        <div class="tab-content">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="./img/1.png" width="100%">
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://www.google.com/" target="_blank">
+                                            <img alt="./img/1.png" src="./img/1.png" width="100%">
+                                            <div class="carousel-caption"></div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://www.google.com/" target="_blank">
+                                            <img alt="./img/2.png" src="./img/2.png" width="100%">
+                                            <div class="carousel-caption"></div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://www.google.com/" target="_blank">
+                                            <img alt="./img/3.png" src="./img/3.png" width="100%">
+                                            <div class="carousel-caption"></div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://www.google.com/" target="_blank">
+                                            <img alt="./img/4.jpg" src="./img/4.jpg" width="100%">
+                                            <div class="carousel-caption"></div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://www.google.com/" target="_blank">
+                                            <img alt="./img/5.png" src="./img/5.png" width="100%">
+                                            <div class="carousel-caption"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="casino-app">
+                            <div class="app-tabs undefined"><button class="tab-link-active sub_title">Best Online Casino
+                                Brands</button><button class="top_ten">Top 10</button></div>
+                            <div class="tab-content">
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8 </span></div>
+                                    <div class="content_right"><span class="bonus_type">
+                                        <p><span style="color:#2ecc71">New Offer</span></p>
+                                        </span>
+                                        <div class="button_div">Play</div><span class="bonus_offer_text">10 Free
+                                        Spins</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="VIP" class="tabcontent">
+                        <div class="tab-content">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="./img/1.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="casino-app">
+                            <div class="app-tabs undefined"><button class="tab-link-active sub_title">Best Online Casino
+                                Brands</button><button class="top_ten">Top 10</button></div>
+                            <div class="tab-content">
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                    </div>
+                                    <div class="content_info"><span class="bonus_offer_text" style="color:black;">Deposit
+                                        ₹1000 Get ₹2000
+                                        Bonus</span><span class="rating_star">9.6 </span><span class="brand_label">Casumo </span></div>
+                                    <div class="content_right">
+                                        <div class="yellow_play">Play</div><span class="minvip_deposit"> Min Vip Deposit :
+                                    </span><span class="minvip_deposit">₹250 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="Packages" class="tabcontent">
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                        <div class="package_content">
+                            <div class="content_div">
+                                <div class="content_round_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (6).png">
+                                </div>
+                                <div class="content_info"><span class="brand_label">Royal Panda </span></div>
+                                <div class="content_right"><span class="rating_star">9.8 </span></div>
+                            </div>
+                            <div class="fav_banner"><img alt="#" src="./hCgdEFEQLCzy/static/images (5).png">
+                            </div>
+                            <div class="row_reverse">
+                                <div class="button_div">Play</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="PlaySlots" class="tabcontent">
+                        <div class="tab-content">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="./img/1.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="casino-app">
+                            <div class="app-tabs undefined"><button class="tab-link-active sub_title">Best Online Casino
+                                Brands</button><button class="top_ten">Top 10</button></div>
+                            <div class="tab-content">
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                                <div class="content_div">
+                                    <div class="content_fav"><img alt="#" src="./hCgdEFEQLCzy/static/images (4).png">
+                                    </div>
+                                    <div class="content_info"><span class="brand_label">BerryBurst
+                                    </span><span>PlayTech</span></div>
+                                    <div class="content_right">
+                                        <div class="button_div">Play</div>
+                                        <div class="content_brand">10CRIC</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+
+            <div id="Casino" class="tabcontent">
+                <div class="tab-content">
+
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/1.png" width="100%" height="50%">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="img/2.png" width="100%">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="img/3.png" width="100%">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="img/4.jpg" width="100%">
+                                <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="img/5.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="casino-app">
+                    <div class="app-tabs undefined"><button class="tab-link-active sub_title">Best Online Casino
+                            Brands</button><button class="top_ten">Top 10</button></div>
+                    <div class="tab-content">
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+
+                        <div class="content_div">
+                            <div class="content_fav"><img alt="#" src="hCgdEFEQLCzy/static/images (1).png">
+                            </div>
+                            <div class="content_info"><span class="brand_label">Royal Panda </span><span class="rating_star">9.8
+                                </span><span class="bonus_offer_text">100% up to ₹20,000 + 10 FREE SPINS</span></div>
+                            <div class="content_right"><span class="bonus_type">
+                                    <p><span style="color:#2ecc71">New Offer</span></p>
+                                </span>
+                                <div class="button_div">Play</div>
+                                <div class="preview_button">Review Brand</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+
+            <script>
+                function openPage(pageName, elmnt, color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+
+                    }
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.className = "tab-link-active pack-tab";
+                    elmnt.style.backgroundColor = color;
+
+                }
+
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+            </script>
+
+
+            <script>
+                ! function(e) {
+                    function r(r) {
+                        for (var n, a, p = r[0], i = r[1], l = r[2], f = 0, s = []; f < p.length; f++) a = p[f], Object
+                            .prototype
+                            .hasOwnProperty.call(o, a) && o[a] && s.push(o[a][0]), o[a] = 0;
+                        for (n in i) Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+                        for (c && c(r); s.length;) s.shift()();
+                        return u.push.apply(u, l || []), t()
+                    }
+
+                    function t() {
+                        for (var e, r = 0; r < u.length; r++) {
+                            for (var t = u[r], n = !0, p = 1; p < t.length; p++) {
+                                var i = t[p];
+                                0 !== o[i] && (n = !1)
+                            }
+                            n && (u.splice(r--, 1), e = a(a.s = t[0]))
+                        }
+                        return e
+                    }
+                    var n = {},
+                        o = {
+                            1: 0
+                        },
+                        u = [];
+
+                    function a(r) {
+                        if (n[r]) return n[r].exports;
+                        var t = n[r] = {
+                            i: r,
+                            l: !1,
+                            exports: {}
+                        };
+                        return e[r].call(t.exports, t, t.exports, a), t.l = !0, t.exports
+                    }
+                    a.m = e, a.c = n, a.d = function(e, r, t) {
+                        a.o(e, r) || Object.defineProperty(e, r, {
+                            enumerable: !0,
+                            get: t
+                        })
+                    }, a.r = function(e) {
+                        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol
+                            .toStringTag, {
+                                value: "Module"
+                            }), Object.defineProperty(e, "__esModule", {
+                            value: !0
+                        })
+                    }, a.t = function(e, r) {
+                        if (1 & r && (e = a(e)), 8 & r) return e;
+                        if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+                        var t = Object.create(null);
+                        if (a.r(t), Object.defineProperty(t, "default", {
+                                enumerable: !0,
+                                value: e
+                            }), 2 & r && "string" != typeof e)
+                            for (var n in e) a.d(t, n, function(r) {
+                                return e[r]
+                            }.bind(null, n));
+                        return t
+                    }, a.n = function(e) {
+                        var r = e && e.__esModule ? function() {
+                            return e.default
+                        } : function() {
+                            return e
+                        };
+                        return a.d(r, "a", r), r
+                    }, a.o = function(e, r) {
+                        return Object.prototype.hasOwnProperty.call(e, r)
+                    }, a.p = "./hCgdEFEQLCzy/";
+                    var p = this["webpackJsonpcasino-app-react"] = this["webpackJsonpcasino-app-react"] || [],
+                        i = p.push.bind(p);
+                    p.push = r, p = p.slice();
+                    for (var l = 0; l < p.length; l++) r(p[l]);
+                    var c = i;
+                    t()
+                }([])
+            </script>
+            <!-- <script src="./js/2.34526cc0.chunk.js"></script>
+  <script src="./js/main.101f33be.chunk.js"></script> -->
+</body>
+
+</html>
